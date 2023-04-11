@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+ body {
+    background-image: linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)), url(./img/city.jpeg);
+    background-position: top;
+    background-size: cover;
+}
+
+header {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    
+}
+header .logo {
+    color: #F9FAF8;
+    font-weight: bold;
+    font-size: 2rem;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+header .links {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-weight: 300;
+    font-size: 1.25rem;
+} 
+header .contact {
+    padding: .125em .60em;
+    border: 2px solid #F9FAF8;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.main .intro {
+    display: flex;
+    max-width: 72rem;
+    margin: 20rem auto;
+    justify-content: space-between;
+ 
+}
+.intro .left {
+    align-self: center;
+    max-width: 40rem;
+}
+
+.left .welcome {
+    color: #F9FAF8;
+    font-size: 3rem;
+
+}
+.left .text {
+    color: #E5E7EB;
+    font-size: 1rem;
+    margin: .5rem 0 3rem;
+}
+
+.left a {
+    color: #F9FAF8;
+    text-decoration: none;
+    padding: .5rem 1.2rem;
+    border: 2px solid #F9FAF8;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.top, .bottom{
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem;
+}
+.right .img {
+    width: 12.5rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
