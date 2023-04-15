@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -20,11 +22,26 @@ header {
     padding: 1rem 0;
     
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.header img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: contain;
+}
 header .logo {
+    display: flex;
     color: #F9FAF8;
+    
     font-weight: bold;
     font-size: 2rem;
 }
+
 header ul {
     list-style: none;
     display: flex;
@@ -36,17 +53,41 @@ header .links {
     font-weight: 300;
     font-size: 1.25rem;
 } 
+header .underline {
+    position: relative;
+}
+
+header .underline::after {
+    content: "";
+    background-color: #2ffaf3;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 250ms ease-in-out;
+
+}
+header .underline:hover::after{
+    width: 100%; 
+}
+
+
 header .contact {
     padding: .125em .60em;
     border: 2px solid #F9FAF8;
     border-radius: 15px;
     font-weight: bold;
 }
+.contact:hover {
+    background-color: #F9FAF8;
+    color: black;
+}
 
 .main .intro {
     display: flex;
     max-width: 72rem;
-    margin: 20rem auto;
+    margin: 14rem auto;
     justify-content: space-between;
  
 }
@@ -75,15 +116,90 @@ header .contact {
     font-weight: bold;
     margin-right: 1rem;
 }
+
+.left a:hover {
+    background-color: #F9FAF8;
+    color: black;
+}
 .top, .bottom{
     display: flex;
     gap: 2rem;
     margin: 1.5rem;
 }
+
+.card {
+    position: relative;
+}
+
 .right .img {
     width: 12.5rem;
     height: 14rem;
     object-fit: cover;
+    border: 2px solid #F9FAF8;
     border-radius: 15px;
+    opacity: 1;
+    transition: opacity ease-out 250ms;
+
+}
+.card:hover .img{
+    opacity: .4;
+}
+.card-text {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+
+}
+.card:hover .card-text {
+    opacity: 1;
+
+}
+
+.middle {
+    margin: 4rem auto;
+    padding: 2rem;
+    min-height: 36rem;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.middle h2 {
+    color: #F9FAF8;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0rem;
+    
+}
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+
+.icon {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #E5E7EB;
+}
+.images p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #F9FAF8;
+}
+.images div {
+    opacity: 1;
+}
+.images div:hover{
+    opacity: .1;
 }
 
