@@ -35,7 +35,6 @@ header {
     object-fit: contain;
 }
 header .logo {
-    display: flex;
     color: #F9FAF8;
     
     font-weight: bold;
